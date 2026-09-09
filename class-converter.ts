@@ -419,6 +419,7 @@ async function main() {
           ["ProjectileStatsProps", "ProjectileStats"],
           ["CharacterStatsProps", "CharacterStats"],
           ["StageShadowLayerStatsProps", "StageShadowLayerStats"],
+          ["StructureStatsProps", "StructureStats"],
           ...classNames.map((s) => [s, s]),
         ];
 
