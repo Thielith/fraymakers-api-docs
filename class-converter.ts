@@ -42,7 +42,7 @@ classTree.set("GameObjectStats", [
 classTree.set("AnimationStats", [
   "CharacterAnimationStats",
   "AssistAnimationStats",
-  "Projecill prolltileAnimationStats",
+  "ProjectileAnimationStats",
 ]);
 
 const parents: Map<string, string> = new Map<string, string>();
