@@ -136,3 +136,9 @@ docs/classes
 docs/.vitepress/cache/
 docs/.vitepress/dist/
 /.vitepress/cache
+docs/common/Assist.md
+docs/common/Character.md
+docs/common/Entity.md
+docs/common/GameObject.md
+docs/common/Projectile.md
+/typedefs
