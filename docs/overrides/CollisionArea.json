@@ -1,0 +1,18 @@
+{
+    "instanceFunctions": {
+        "getCollisionAreaStat": "Returns the value of the given stat for this CollisionArea. A list of valid stats can be found in (CollisionAreaStats)[CollisionAreaStats.md].\n\nParameters:\n- The name of the (CollisionAreaStats)[CollisionAreaStats.md] to retrieve the value of.\n\n\nThis location of this part is temporary, but it seems this class generally isn't used directly and acts as a parent class for (RectCollisionArea)[RectCollisionArea.md].",
+
+        "getPreviousX": "Returns the X position of this CollisionArea in the previous frame.",
+
+        "getPreviousY": "Returns the Y position of this CollisionArea in the previous frame.",
+
+        "getType": "Returns the type of this CollisionArea. For CollisionArea, it returns `4`.",
+
+        "hitTestPoint": "Returns `true` if the given X and Y position is within this CollisionArea.\n\nParameters:\n- `x`: The X position to test for in global coordinates.\n- `y`: The Y position to test for in global coordinates.\n- `shapeFlag`: An optional parameter that does... something? It is unknown what this does.",
+
+        "hitTestRect": "Returns `true` if the given [Rectangle](Rectangle.md) is within this CollisionArea.\n\nParameters:\n- `rect`: The [Rectangle](Rectangle.md) to check an overlap against.\n- `shapeFlag`: An optional parameter that does... something? It is unknown what this does.",
+
+        "updateCollisionAreaStats": "Updates this CollisionArea's (CollisionAreaStats)[CollisionAreaStats.md].\n\nParameters:\n- The new values for each [CollisionAreaStats](CollisionAreaStats.md) in an object. You only have to include the stats you want to modify.\n\n```haxe\n// Disables the CollisionArea\nmyCollisionArea.updateCollisionAreaStats({\n    disabled: true\n});\n```"
+    }
+}
+
