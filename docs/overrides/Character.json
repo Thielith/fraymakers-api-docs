@@ -1,73 +1,73 @@
 {
     "instanceFunctions": {
-        "clearInputBuffer": "Fully clears this character's input buffer. Character input buffers are handled automatically, so this function doesn't need to be ran unless you are interacting with the input buffer yourself.",
+        "clearInputBuffer": "Fully clears this Character's input buffer. Character input buffers are handled automatically, so this function doesn't need to be ran unless you are interacting with the input buffer yourself.",
 
-        "endAnimation": "Forciblly ends this character's current animation. Acts as if there were no more animation keyframes after the frame this function is ran.\n\nAny framescript code that plays on the first frame of the next animation will execute before any code after this function call will execute. This applies both when this function is called in a framescript keyframe and in the character's main script.\n\n```haxe\n// NOTES:\n// \"self\" refers to the fighter running this code.\n// These are set on the same fighter animation.\n\n// frame 1\nEngine.log(\"Starting animation 1.\");\nEngine.log(\"Starting animation 2.\");\nEngine.log(\"Starting animation 3.\");\n\n// frame 10\nEngine.log(\"Ending animation.\");\nself.endAnimation();\nEngine.log(\"Finished ending animation 1.\");\nEngine.log(\"Finished ending animation 2.\");\nEngine.log(\"Finished ending animation 3.\");\n```\n\nOutput:\n```\nStarting animation 1.\nStarting animation 2.\nStarting animation 3.\nEnding animation.\nStarting animation 1.\nStarting animation 2.\nStarting animation 3.\nFinished ending animation 1.\nFinished ending animation 2.\nFinished ending animation 3.\n```",
+        "endAnimation": "Forciblly ends this Character's current animation. Acts as if there were no more animation keyframes after the frame this function is ran.\n\nAny framescript code that plays on the first frame of the next animation will execute before any code after this function call will execute. This applies both when this function is called in a framescript keyframe and in the Character's main script.\n\n```haxe\n// NOTES:\n// \"self\" refers to the fighter running this code.\n// These are set on the same fighter animation.\n\n// frame 1\nEngine.log(\"Starting animation 1.\");\nEngine.log(\"Starting animation 2.\");\nEngine.log(\"Starting animation 3.\");\n\n// frame 10\nEngine.log(\"Ending animation.\");\nself.endAnimation();\nEngine.log(\"Finished ending animation 1.\");\nEngine.log(\"Finished ending animation 2.\");\nEngine.log(\"Finished ending animation 3.\");\n```\n\nOutput:\n```\nStarting animation 1.\nStarting animation 2.\nStarting animation 3.\nEnding animation.\nStarting animation 1.\nStarting animation 2.\nStarting animation 3.\nFinished ending animation 1.\nFinished ending animation 2.\nFinished ending animation 3.\n```",
 
-        "getAirdashCount": "Returns the number of airdashes this character has performed since leaving the ground.",
+        "getAirdashCount": "Returns the number of airdashes this Character has performed since leaving the ground.",
 
-        "getAssistCharge": "Returns the amount of assist charge this character currently has. Result is a float between 0 and 1; 0 represents an empty bar and 1 a full bar.",
+        "getAssistCharge": "Returns the amount of assist charge this Character currently has. Result is a float between 0 and 1; 0 represents an empty bar and 1 a full bar.",
 
-        "getAssistContentStat": "Returns the value of any attribute defined for this character's assist. These attributes are found in the script associated with the assist's `objectStatsId` (defined in `manifest.json`, usually ends up being `AssistStats.hx`).\n\nParameters:\n\n- The name of the attribute to retrieve the value of.",
+        "getAssistContentStat": "Returns the value of any attribute defined for this Character's assist. These attributes are found in the script associated with the assist's `objectStatsId` (defined in `manifest.json`, usually ends up being `AssistStats.hx`).\n\nParameters:\n\n- The name of the attribute to retrieve the value of.",
 
-        "getAssistController": "Returns the [AssistController](AssistController.md) associated with this character's assist.",
+        "getAssistController": "Returns the [AssistController](AssistController.md) associated with this Character's assist.",
 
-        "getAssistName": "Returns the `resourceID` of this character's assist.",
+        "getAssistName": "Returns the `resourceID` of this Character's assist.",
 
-        "getAssist": "Returns an array containing the `resourceID` of all assists associated with this character. Is functionally the same as [getAssistName](#getassistname-string), with the return value being the first element in the returned array.",
+        "getAssist": "Returns an array containing the `resourceID` of all assists associated with this Character. Is functionally the same as [getAssistName](#getassistname-string), with the return value being the first element in the returned array.",
 
-        "getCharacterStat": "Returns the value of any attribute defined for this character. These attributes are found in the script associated with the character's `objectStatsId` (defined in `manifest.json`, usually ends up being `CharacterStats.hx`).",
+        "getCharacterStat": "Returns the value of any attribute defined for this Character. These attributes are found in the script associated with the Character's `objectStatsId` (defined in `manifest.json`, usually ends up being `CharacterStats.hx`).",
 
-        "getDamageCounterAssistSprite": "Returns the [Sprite](Sprite.md) used in the character's damage counter's assist progress bar.",
+        "getDamageCounterAssistSprite": "Returns the [Sprite](Sprite.md) used in the Character's damage counter's assist progress bar.",
 
-        "getDoubleJumpCount": "Returns the number of double jumps this character has performed.",
+        "getDoubleJumpCount": "Returns the number of double jumps this Character has performed.",
 
-        "getFoes": "Returns an array of all [Characters](Character.md) in the match that aren't this character.",
+        "getFoes": "Returns an array of all Character class instances in the match that aren't this Character.",
 
-        "getLives": "Returns the number of stocks this character currently has.",
+        "getLives": "Returns the number of stocks this Character currently has.",
 
-        "getPlayerConfig": "Returns the [PlayerConfig](PlayerConfig.md) associated with this character.",
+        "getPlayerConfig": "Returns the [PlayerConfig](PlayerConfig.md) associated with this Character.",
 
-        "getScore": "Returns the [Score](Score.md) associated with this character.",
+        "getScore": "Returns the [Score](Score.md) associated with this Character.",
 
-        "getType": "Returns the type of this character. For [Character](Character.md), this returns `6`.",
+        "getType": "Returns the type of this Character. For Character, this returns `6`.",
 
-        "inAerialAttackState": "Returns `true` if this character is currently in an attacking state while in the air.",
+        "inAerialAttackState": "Returns `true` if this Character is currently in an attacking state while in the air.",
 
-        "inAirdashCanceledAnimation": "Returns `true` if this character was in an airdash state before their currently playing animation.",
+        "inAirdashCanceledAnimation": "Returns `true` if this Character was in an airdash state before their currently playing animation.",
 
-        "inHurtState": "Returns `true` if this character is currently in a hurt state.",
+        "inHurtState": "Returns `true` if this Character is currently in a hurt state.",
 
-        "inSpecialAttackState": "Returns `true` if this character is currently in an attack state due to performing a special attack. This carries over to the special attack's `landAnimation` if defined.",
+        "inSpecialAttackState": "Returns `true` if this Character is currently in an attack state due to performing a special attack. This carries over to the special attack's `landAnimation` if defined.",
 
-        "inStrongAttackChargeState": "Returns `true` if this character is currently charging a strong attack.",
+        "inStrongAttackChargeState": "Returns `true` if this Character is currently charging a strong attack.",
 
-        "isForcedGetup": "Returns `true` if this character is being forced into [CState.CRASH_GET_UP](CState.md#cstate-crash-get-up). Usually happens after a \"jab lock.\"",
+        "isForcedGetup": "Returns `true` if this Character is being forced into [CState.CRASH_GET_UP](CState.md#cstate-crash-get-up). Usually happens after a \"jab lock.\"",
 
-        "performHitstopNudge": "Nudges this character in the corresponding direction when they are currently in hitstop.\n\nParameters:\n- `up`, `down`, `left`, and `right` are the direction to nudge towards.\n- `nudgeMultiplier` is the amount to multiply the nudge amount by.",
+        "performHitstopNudge": "Nudges this Character in the corresponding direction when they are currently in hitstop.\n\nParameters:\n- `up`, `down`, `left`, and `right` are the direction to nudge towards.\n- `nudgeMultiplier` is the amount to multiply the nudge amount by.",
 
-        "playAttackVoice": "Plays one of the audio files defined in this character's `attackVoiceIds`, defined in the script associated with character's `objectStatsId` (defined in `manifest.json`, usually ends up being `CharacterStats.hx`).",
+        "playAttackVoice": "Plays one of the audio files defined in this Character's `attackVoiceIds`, defined in the script associated with Character's `objectStatsId` (defined in `manifest.json`, usually ends up being `CharacterStats.hx`).",
 
-        "playHurtHeavyVoice": "Plays one of the audio files defined in this character's `hurtHeavyVoiceIds`, defined in the script associated with character's `objectStatsId` (defined in `manifest.json`, usually ends up being `CharacterStats.hx`).",
+        "playHurtHeavyVoice": "Plays one of the audio files defined in this Character's `hurtHeavyVoiceIds`, defined in the script associated with Character's `objectStatsId` (defined in `manifest.json`, usually ends up being `CharacterStats.hx`).",
 
-        "playHurtLightVoice": "Plays one of the audio files defined in this character's `hurtLightVoiceIds`, defined in the script associated with character's `objectStatsId` (defined in `manifest.json`, usually ends up being `CharacterStats.hx`).",
+        "playHurtLightVoice": "Plays one of the audio files defined in this Character's `hurtLightVoiceIds`, defined in the script associated with Character's `objectStatsId` (defined in `manifest.json`, usually ends up being `CharacterStats.hx`).",
 
-        "playHurtMediumVoice": "Plays one of the audio files defined in this character's `hurtMediumVoiceIds`, defined in the script associated with character's `objectStatsId` (defined in `manifest.json`, usually ends up being `CharacterStats.hx`).",
+        "playHurtMediumVoice": "Plays one of the audio files defined in this Character's `hurtMediumVoiceIds`, defined in the script associated with Character's `objectStatsId` (defined in `manifest.json`, usually ends up being `CharacterStats.hx`).",
 
-        "playKoVoice": "Plays one of the audio files defined in this character's `koVoiceIds`, defined in the script associated with character's `objectStatsId` (defined in `manifest.json`, usually ends up being `CharacterStats.hx`).",
+        "playKoVoice": "Plays one of the audio files defined in this Character's `koVoiceIds`, defined in the script associated with Character's `objectStatsId` (defined in `manifest.json`, usually ends up being `CharacterStats.hx`).",
 
-        "setAirdashCount": "Sets the number of airdashes this character has performed.\n\nParameters:\n- The new value to set the airdash count to.",
+        "setAirdashCount": "Sets the number of airdashes this Character has performed.\n\nParameters:\n- The new value to set the airdash count to.",
 
-        "setAssistCharge": "Sets this character's assist charge.\n\nParameters:\n- The new value to set the assist charge to.",
+        "setAssistCharge": "Sets this Character's assist charge.\n\nParameters:\n- The new value to set the assist charge to.",
 
         "setAssistCutinAnimation": "Sets the animation used when summoning an assist. Valid animations are in the entity associated with the assist's `metadata.ui.entityId` (defined in `manifest.json`, usually `menu.entity`).\n\nParameters:\n- The name of the animation to use.",
 
-        "setDoubleJumpCount": "Sets the number of double jumps this character has performed.\n\nParameters:\n- The new value to set the double jump count to.",
+        "setDoubleJumpCount": "Sets the number of double jumps this Character has performed.\n\nParameters:\n- The new value to set the double jump count to.",
 
-        "setLives": "Sets the number of stocks this character has.\n\nParameters:\n- The new stock amount.",
+        "setLives": "Sets the number of stocks this Character has.\n\nParameters:\n- The new stock amount.",
 
-        "updateAnimationStats": "Updates this character's [CharacterAnimationStats](CharacterAnimationStats.md).\n\nParameters:\n- The new values for each [CharacterAnimationStats](CharacterAnimationStats.md). You only have to include the stats you want to modify.",
+        "updateAnimationStats": "Updates this Character's [CharacterAnimationStats](CharacterAnimationStats.md).\n\nParameters:\n- The new values for each [CharacterAnimationStats](CharacterAnimationStats.md). You only have to include the stats you want to modify.",
 
-        "updateCharacterStats": "Updates this character's [CharacterStats](CharacterStats.md).\n\nParameters:\n- The new values for each [CharacterStats](CharacterStats.md). You only have to include the stats you want to modify."
+        "updateCharacterStats": "Updates this Character's [CharacterStats](CharacterStats.md).\n\nParameters:\n- The new values for each [CharacterStats](CharacterStats.md). You only have to include the stats you want to modify."
     }
 }
