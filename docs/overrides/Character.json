@@ -68,6 +68,6 @@
 
         "updateAnimationStats": "Updates this Character's [CharacterAnimationStats](CharacterAnimationStats.md).\n\nParameters:\n- The new values for each [CharacterAnimationStats](CharacterAnimationStats.md). You only have to include the stats you want to modify.",
 
-        "updateCharacterStats": "Updates this character's [CharacterStats](CharacterStats.md).\n\nParameters:\n- The new values for each [CharacterStats](CharacterStats.md) in an object. You only have to include the stats you want to modify.\n\n```haxe\n// Sets the number of airdashes this character can perform to 5.\n// \"self\" refers to the character that will be affected.\nself.updateCharacterStats({\n	airdashLimit: 5\n});"
+        "updateCharacterStats": "Updates this character's [CharacterStats](CharacterStats.md).\n\nParameters:\n- The new values for each [CharacterStats](CharacterStats.md) in an object. You only have to include the stats you want to modify.\n\n```haxe\n// Sets the number of airdashes this character can perform to 5.\n// \"self\" refers to the character that will be affected.\nself.updateCharacterStats({\n    airdashLimit: 5\n});"
     }
 }
